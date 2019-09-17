@@ -61,7 +61,7 @@ db.sqlite3
 .vscode/
 
 # virtual env
-work-env/
+word-flash-env/
 
 # mac
 .DS_Store
