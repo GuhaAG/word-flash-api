@@ -1,16 +1,13 @@
 from rest_framework.response import Response
 from rest_framework import viewsets, status
 
+from . import services
 from . import serializers
 from . import WordPair
 
 
-# To-do: Replace with data import from gdrive api
+WordPairs = services.getWordPairsFromCsv()
 
-WordPairs = {
-    1: WordPair(id=1, key_en='Yes', key_jp='Hai'),
-    2: WordPair(id=2, key_en='No', key_jp='Iie')
-}
 
 class WordPairViewSet(viewsets.ViewSet):
     serializer_class = serializers.WordPairSerializer
