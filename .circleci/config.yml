@@ -1,0 +1,13 @@
+version: 2 # use CircleCI 2.0
+jobs: # a collection of steps
+  build:     
+    docker: # run the steps with Docker
+      - image: circleci/python
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory      
+      - run:
+          name: install-dependencies
+          command: pip install -r requirements.txt
+      - run: 
+          name: test
+          command: python manage.py test
