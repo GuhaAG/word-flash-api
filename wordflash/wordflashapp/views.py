@@ -5,7 +5,6 @@ from . import services
 from . import serializers
 from . import WordPair
 
-
 WordPairs = services.getWordPairsFromCsv()
 
 
