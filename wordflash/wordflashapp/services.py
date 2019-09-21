@@ -1,6 +1,6 @@
 import csv
 import os
-import requests
+
 from wordflash.settings import BASE_DIR
 from . import WordPair
 
@@ -12,7 +12,6 @@ WordPairs = {
 }"""
 
 local_file_path = os.path.join(BASE_DIR, 'drive-downloads/wordpairs.csv')
-remote_file_path = 'https://drive.google.com/open?id=1y0njxwAgEo7snlfTj-C_jSpfHc3tKzh88wmg5WuBoe4'
 
 
 def getWordPairsFromCsv():
@@ -29,8 +28,3 @@ def getWordPairsFromCsv():
     infile.close()
 
     return wordpairs
-
-
-def downloadFileFromGDrive():
-    response = requests.get(remote_file_path+'&output=csv')
-    print(response.content)
