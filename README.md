@@ -1,3 +1,8 @@
+## *** No longer under-development, replaced by `flash-drive` flutter project also on this account ***
+
+
+-----------------------------------------------------
+
 ## Wordflash backend
 
 This is a _simple_ python/django rest framework `REST API` which will read language word pairs from google drive and throw them back.
